@@ -17,7 +17,14 @@ public class MainBanca {
 		
 		for (int i = 0; i < arr.length; i++) {
 			
-			System.out.println("Al sacar:"+arr[i].retirarFondos(1000));
+			try {
+				System.out.println("Al sacar:"+arr[i].retirarFondos(1000));
+			} catch (Exception e) {
+				//Envio un correo indicando intento erroneo
+				//Guardo el el log del usuario
+				
+				System.out.println(e.getMessage());
+			}
 			System.out.println(arr[i]);
 			
 			

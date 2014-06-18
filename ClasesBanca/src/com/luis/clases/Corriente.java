@@ -25,7 +25,7 @@ public class Corriente extends Cuenta{
 
 
 
-	public double retirarFondos(double cantidad) {
+	public double retirarFondos(double cantidad) throws Exception {
 		if(cantidad<=saldo)
 			saldo-=cantidad;
 		else{
@@ -33,6 +33,11 @@ public class Corriente extends Cuenta{
 				saldo-=cantidad;
 				saldo=saldo+(saldo*interes/100);
 				
+			}
+			else{
+				
+				throw 
+				new Exception("Saldo insuficiente, tu disponible actual es:"+saldo);
 			}
 			
 			

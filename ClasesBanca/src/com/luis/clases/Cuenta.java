@@ -46,7 +46,7 @@ public abstract class Cuenta {
 		this.saldo = saldo;
 	}
 	
-	public abstract double retirarFondos(double cantidad);
+	public abstract double retirarFondos(double cantidad) throws Exception;
 	public abstract double ingresarFondos(double cantidad);
 	public String toString(){
 		
